@@ -1,0 +1,15 @@
+import re 
+
+class Solution: 
+    def isPalindrome(self, s: str) -> bool: 
+        s = s.lower() 
+        
+        print(s)
+        
+        text = re.sub('[^a-zA-Z0-9]','',s) 
+        
+        print("Origital", text)
+        
+        print("Reversal", text[::-1])
+        
+        return text == text[::-1]
